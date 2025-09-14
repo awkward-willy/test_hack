@@ -1,8 +1,10 @@
 import Keypad from './components/Keypad';
+import NavBar from "./components/NavBar";
 
 export default function Home() {
   return (
     <div className="max-w-xs mx-auto p-2 min-h-screen flex flex-col justify-center items-center text-center">
+      <NavBar />
       <main className="flex-1 flex flex-col justify-center items-center space-y-4">
         <h1 className="text-lg font-bold text-gray-600">
           Welcome!
