@@ -1,17 +1,34 @@
 "use client";
 
-import { Box, Flex, IconButton, Text, Drawer, Portal, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  IconButton,
+  Text,
+  Drawer,
+  Portal,
+  Button,
+} from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa6";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export default function NavBar() {
   const triggerRef = useRef<HTMLButtonElement | null>(null);
 
-    const menuItems = [
+  const menuItems = [
     { label: "Expense Tracker", action: () => alert("Go to Expense Tracker") },
-    { label: "Financial Analysis", action: () => alert("Go to Financial Analysis") },
-    { label: "Currency Converter", action: () => alert("Go to Currency Converter") },
-    { label: "Investment Calculator", action: () => alert("Go to Investment Calculator") },
+    {
+      label: "Financial Analysis",
+      action: () => alert("Go to Financial Analysis"),
+    },
+    {
+      label: "Currency Converter",
+      action: () => alert("Go to Currency Converter"),
+    },
+    {
+      label: "Investment Calculator",
+      action: () => alert("Go to Investment Calculator"),
+    },
     { label: "Financial Tips", action: () => alert("Go to Financial Tips") },
     { label: "About", action: () => alert("Go to About") },
   ];
@@ -48,21 +65,20 @@ export default function NavBar() {
               <Drawer.Backdrop />
               <Drawer.Positioner>
                 <Drawer.Content bg="green.600">
-                  <Drawer.Header/>
+                  <Drawer.Header />
                   <Drawer.Body>
                     <Box>
-                        {menuItems.map((item) => (
+                      {menuItems.map((item) => (
                         <Box key={item.label} mb={2}>
-                            <Button color="white" bg="none">
+                          <Button color="white" bg="none">
                             {item.label}
-                            </Button>
+                          </Button>
                         </Box>
-                        ))}
+                      ))}
                     </Box>
                   </Drawer.Body>
                   <Drawer.Footer />
-                  <Drawer.CloseTrigger asChild>
-                  </Drawer.CloseTrigger>
+                  <Drawer.CloseTrigger asChild></Drawer.CloseTrigger>
                 </Drawer.Content>
               </Drawer.Positioner>
             </Portal>
