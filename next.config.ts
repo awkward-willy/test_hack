@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  output: "export",
   trailingSlash: true,
-  assetPrefix: isProd ? '/cloudphone-2025meichuhackathon-demo/' : '',
-  basePath: isProd ? '/cloudphone-2025meichuhackathon-demo' : '',
+  assetPrefix: isProd ? "/test_hack/" : "",
+  basePath: isProd ? "/test_hack" : "",
   images: {
     unoptimized: true,
   },
